@@ -1,0 +1,359 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<FrameworkProject.Models.Products>
+@{
+    ViewData["Title"] = "Plants"; }
+@{
+    <!DOCTYPE html>
+    <html lang="en">
+    <body>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }
+
+            .rowa {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .col-5a {
+                width: 19%;
+                background-color: #fff;
+            }
+
+            .product-container {
+                width: 1500px;
+                min-height: 800px;
+                margin: 50px auto;
+                background-color: rgb(245 245 245);
+                display: flex;
+                justify-content: center;
+            }
+
+            .sidebar {
+                width: 260px;
+            }
+
+                .sidebar hr {
+                    width: 240px;
+                    margin-left: 0;
+                }
+
+            .sidebar-menu {
+                font-size: 20px;
+                margin-top: 30px;
+                width: 240px;
+            }
+
+            .menu-list {
+                height: 40px !important;
+                line-height: 40px;
+                padding-left: 15px;
+            }
+
+            .sidebar-menu .menu-list:nth-child(even) {
+                background-color: rgba(202, 188, 188, 0.527);
+            }
+
+            .sidebar-menu div {
+                margin-top: 20px;
+                cursor: pointer;
+            }
+
+            .product-items {
+                width: 1240px;
+            }
+
+
+            .product-navbar {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                background-color: rgba(0,0,0,.03);
+                margin-right: 30px;
+            }
+
+            .navbar-left {
+                display: flex;
+                align-items: center;
+                height: 90px;
+                font-size: 20px;
+            }
+
+                .navbar-left span {
+                    margin-left: 30px;
+                }
+
+                .navbar-left a {
+                    width: 200px;
+                    height: 44px;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 44px;
+                    background-color: #fff;
+                    border: none;
+                    margin: 0 5px;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                    .navbar-left a:nth-child(3) {
+                        background-color: #000000;
+                        color: #fff;
+                    }
+
+            .navbar-button {
+                margin-left: 10px;
+            }
+
+            .navbar-select {
+                margin-left: 5px;
+                width: 240px;
+                height: 44px;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                padding-left: 20px;
+                cursor: pointer;
+            }
+
+            .navbar-right {
+                display: flex;
+                align-items: center;
+            }
+
+                .navbar-right p {
+                    width: 16px;
+                }
+
+                .navbar-right button {
+                    width: 40px;
+                    height: 40px;
+                    border: none;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+
+                .navbar-right .button-left {
+                    border-right: 1px solid gray;
+                }
+
+
+            .product-list {
+                min-height: 400px;
+                width: 80%;
+            }
+
+
+            .product-item {
+                height: 380px;
+                border-radius: 3px;
+                margin-top: 15px;
+                cursor: pointer;
+            }
+
+                .product-item:hover {
+                    transform: translateY(-2px);
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                }
+
+                .product-item img {
+                    width: 100%;
+                    height: 60%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+            .product-info {
+                padding: 5px 10px;
+                height: 40%;
+            }
+
+            .product-name {
+                height: 40%;
+            }
+
+            .product-price {
+                color: #ee4d2d;
+                font-size: 24px;
+                height: 35%;
+            }
+
+            .product-status {
+                height: 25%;
+                position: relative;
+                width: 100%;
+            }
+
+                .product-status .heart img {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    right: 20px;
+                    top: -140%;
+                    z-index: 10;
+                }
+
+                    .product-status .heart img:hover {
+                        width: 40px;
+                        height: 40px;
+                        transition: all 0.1s linear;
+                    }
+
+            .unfavorite {
+            }
+
+            .favorite {
+                display: none;
+                top: 0;
+            }
+
+            .stars {
+                width: 30px;
+                display: flex;
+            }
+
+            .stock {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            .heart {
+                width: 40px;
+                height: 40px;
+            }
+
+            .stars img {
+                width: 16px;
+                height: 16px;
+            }
+
+            .product-page-number {
+                margin: 30px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .product-page-number button {
+                    width: 50px;
+                    height: 40px;
+                    font-size: 30px;
+                    margin: 0px 20px;
+                    color: #999898;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+
+
+                .product-page-number .page-number {
+                    background-color: #000000;
+                    line-height: 35px;
+                    color: #fff;
+                    border-radius: 5px;
+                    font-size: 25px;
+                }
+
+            .product-add {
+                position: absolute;
+                right: 0;
+                color: cadetblue !important;
+            }
+        </style>
+        <div class="product-container">
+
+            <div class="product-items">
+                <div class="product-navbar">
+                    <div class="navbar-left">
+                        <span>Sorted by</span>
+                        <div class="navbar-button">
+                            <a href="/Products/Newest" style="color: black">Newest</a>
+                            <a href="/Products/PriceAsc" style="color: black">Price go up</a>
+                            <a href="/Products/PriceDesc">Price go down</a>
+                        </div>
+                        @*<select class="navbar-select" name="">
+                                <option value="" selected>Giá</option>
+                                <option value="">Giá: Thấp đến Cao</option>
+                                <option value="">Giá: Cao đến Thấp</option>
+                            </select>*@
+                    </div>
+                </div>
+
+                <div class="product-list">
+                    <div class="product-items rowa">
+                        @{
+                            @foreach (var item in Model)
+                            {
+                                <div class="product-item col-5a">
+                                    <img src="@item.IMG"
+                                         alt="" />
+                                    <div class="product-info">
+                                        <div class="product-name">@item.NAME</div>
+                                        <div class="product-price d-flex justify-content-between">
+                                            <h3>₫ @item.PRICE</h3>
+                                            <a href="/Products/AddFavor?p=@item.PROID">
+                                                <img src="/heart.png" alt="" />
+                                            </a>
+                                        </div>
+                                        <div class="product-status d-flex justify-content-between">
+                                            <div class="stars">
+                                                <img class="star" src="/star.png" alt="" />
+                                                <img class="star" src="/star.png" alt="" />
+                                                <img class="star" src="/star.png" alt="" />
+                                                <img class="star" src="/star.png" alt="" />
+                                                <img class="star" src="/star.png" alt="" />
+                                            </div>
+                                            <a class="product-add" href="/Products/AddToInvoice?proid=@item.PROID">Add</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const love = document.querySelectorAll(".unfavorite");
+        const loved = document.querySelectorAll(".favorite");
+        console.log(love);
+
+        function addFavoriteProduct() {
+            for (var i = 0; i < love.length; i++) {
+                love[i].addEventListener(
+                    "click",
+                    function (i) {
+                        console.log(love[i]);
+                        love[i].style.display = "none";
+                        loved[i].style.display = "block";
+                    }.bind(this, i)
+                );
+                loved[i].addEventListener(
+                    "click",
+                    function (i) {
+                        loved[i].style.display = "none";
+                        love[i].style.display = "block";
+                    }.bind(this, i)
+                );
+            }
+        }
+
+        this.addFavoriteProduct();
+    </script>
+</html>
+}

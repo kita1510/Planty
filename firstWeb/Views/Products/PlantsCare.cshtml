@@ -1,0 +1,98 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Plants care"; }
+@{
+    <style lang="scss">
+        .tips {
+            margin-bottom: rem(100);
+        }
+
+        .tips-container {
+            font-family: $font-lora;
+            font-size: rem(36);
+            font-weight: 200;
+            font-style: italic;
+            line-height: rem(46);
+            align-content: center;
+            align-items: center;
+            font-size: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "txt1 img1" "img2 txt2" "txt3 img3";
+        }
+
+        .tips-container img {
+            max-height: rem(750);
+            height: 100%;
+            width: 100%;
+            border-radius: 30px;
+            object-fit: cover;
+        }
+
+        .tips-content {
+        }
+
+        .tips-content-1 {
+            grid-area: txt1;
+            text-align: justify;
+            margin-right: 20px;
+            padding-right: rem(10);
+        }
+
+        .tips-content-2 {
+            grid-area: txt2;
+            text-align: justify;
+            margin-left: 20px;
+            padding-left: rem(10);
+        }
+
+        .tips-content-3 {
+            grid-area: txt3;
+            text-align: justify;
+            margin-right: 20px;
+            padding-right: rem(10);
+        }
+
+        .tips-image {
+        }
+
+        .tips-image-1 {
+            grid-area: img1;
+        }
+
+        .tips-image-2 {
+            grid-area: img2;
+        }
+
+        .tips-image-3 {
+            grid-area: img3;
+        }
+    </style>
+    <section class="tips">
+        <div class="container tips-container">
+            <span class="tips-content-1">
+                If you think it's time to add a little extra life and greenery to your space, consider getting a money tree plant. Not only are do they have a statement-making appearance, but they're actually pretty easy to care for. Provide a money tree with the right amount of water, light, and humidity, and it's sure to thrive. Here's what you need to know about the popular houseplant, from the symbolism behind it to the nitty-gritty of keeping it alive and growing.
+                <br />Sunlight:
+                According to ProFlowers, money tree plants like a mix of direct and indirect sunlight. As with most houseplants, too much direct sun can scorch the leaves. To achieve the right balance with your money tree, turn or rotate it regularly for more even light distribution. Just make sure to not move it all over the place so as to not disturb it too much. Another thing of note? Money trees can handle fluorescent lighting, so you're safe to keep one in your office as long as you take adequate care of it.
+            </span>
+            <img src="https://images.unsplash.com/photo-1597305877032-0668b3c6413a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGxhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="tips-image-1" class="tips-image-1">
+            <span class="tips-content-2">
+                Soil:
+                It's important that you maintain nutrient-rich potting soil with good drainage, according to the experts at Miracle-Gro. To achieve this, you'll want to use a well-draining potting mix or add some sand and gravel for extra porousness.
+                <br />
+                Water:
+                The best way to keep a money tree plant happy? Give it a good watering every one to two weeks, allowing the soil to dry in between, according to The Sill. Of course, if your plant is getting more light, you'll also need to up its water intake so that it doesn't get too dried out. This is a plant that requires a lot of water but not all of the time.
+            </span>
+            <img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGxhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="tips-image-2" class="tips-image-2">
+            <span class="tips-content-3">
+                Temperature and Humidity:
+                Money tree plants do best in warmer environments, so you'll want to keep them in an area that's between 65 and 75 degrees Fahrenheit. But, the good news is, money trees are also pretty flexible and forgiving. They can still handle temperatures that go 10 degrees below or above that ideal range. As far as humidity goes, money trees thrive with extra moisture, so make sure you mist your plant regularly. Bloomscape suggests putting your money tree plant on a pebble tray to increase humidity in the winter.
+            </span>
+            <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBsYW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="tips-image-3" class="tips-image-3">
+        </div>
+    </section>
+}

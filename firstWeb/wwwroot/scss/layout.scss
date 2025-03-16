@@ -1,0 +1,136 @@
+﻿@import 'typography.scss';
+@import 'variables.scss';
+@import 'override-grid.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size-rem;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: $font-opensans;
+    font-weight: 400;
+    font-size: rem(16);
+
+    &.\--freeze {
+        height: 100%;
+        overflow: hidden !important;
+
+        html.ios & {
+            position: fixed;
+            width: 100%;
+        }
+    }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: $color-white-1; 
+    text-decoration: none;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+ 
+.\--add-fixed-border {
+    html[class*="--scroll-"] & {
+        border-right: 0 solid $color-white-1;
+        border-right-style: solid;
+        border-right-color: $color-white-1;
+    }
+
+    @for $i from 13 through 18 {
+        html.\--scroll-#{$i} & {
+            border-right-width: $i * 1px;
+        }
+    }
+}
+
+.hp-container {
+    padding: 0 rem(20);
+
+    @include mq($BREAKPOINT-LG) {
+        max-width: rem(1784);
+        margin: 0 auto;
+        padding: 0 rem(57);
+    }
+
+    .row {
+        @include mq($BREAKPOINT-LG) {
+            margin-left: rem(-13);
+            margin-right: rem(-13);
+
+            > * {
+                padding-left: rem(13);
+                padding-right: rem(13);
+            }
+        }
+    }
+}
+
+.container {
+    // padding: 0 rem(20);
+
+    @include mq($BREAKPOINT-MD) {
+        padding: 0 rem(5);
+    }
+}
+
+.page-container {
+    padding: 0 rem(20);
+
+    @include mq($BREAKPOINT-MD) {
+        max-width: rem(1704);
+        margin: 0 auto;
+    }
+}
+
+#wrapper {
+    min-width: 100vw;
+
+    .container {
+        max-width: rem(1920);
+        margin: 0 auto;
+        padding: 0 rem(50);
+    }
+}
+
+body {
+    font-family: $font-lora;
+    font-weight: 400;
+    line-height: 1;
+    color: $color-black-1;
+    /*display: flex;
+    justify-content: center;*/
+    overflow-x: hidden;
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    #wrapper {
+        .container {
+            margin: 0 auto;
+            padding: 0 rem(16);
+        }
+    }
+}

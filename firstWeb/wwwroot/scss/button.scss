@@ -1,0 +1,55 @@
+﻿.button {
+    display: flex;
+    // button-name
+    font-family: $font-aeonik;
+    font-weight: 500;
+    text-align: center;
+    color: $color-white-1;
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    // button
+    background: #010101;
+    border-radius: rem(38.1);
+
+    
+}
+
+.button-banner {
+    // buton-name
+    font-size: rem(19.62);
+    font-weight: 250;
+    line-height: rem(24);
+    padding: rem(14.3) rem(44);
+    // button
+    margin-bottom: rem(80.13);
+    margin-left: rem(24);
+}
+
+.button-products {
+    font-size: rem(14.8);
+    font-weight: 250;
+    line-height: rem(17.8);
+    padding: rem(10.75) rem(44.5);
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    .button-banner {
+        // buton-name
+        font-size: rem(9.7);
+        line-height: rem(11.64);
+        padding: rem(7.06) rem(21.5);
+        // button
+        margin-bottom: rem(23.87);
+        margin-left: 0;
+    }
+}
+
+// Screen:  width >= 768px
+@include mq($BREAKPOINT-MD + 1) {
+    .bottom-button-display {
+        display: none;
+    }
+}

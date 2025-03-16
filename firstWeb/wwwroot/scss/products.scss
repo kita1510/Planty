@@ -1,0 +1,145 @@
+﻿.products {
+    margin-top: rem(114);
+
+    .products-title {
+        font-family: $font-aeonik;
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: rem(24);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: rem(37);
+    }
+
+    .products-desc {
+        font-family: $font-lora;
+        font-weight: 500;
+        font-size: rem(48);
+        line-height: rem(61.5);
+        width: 40%;
+        margin: 0 rem(35) rem(37) 0;
+    }
+
+    .products-list {
+        margin-top: rem(52.49);
+        margin-right: rem(-50);
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: rem(368);
+        gap: rem(44);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+    }
+}
+
+.card {
+    scroll-snap-align: start;
+
+    .card-products {
+        .card-img {
+            width: rem(368);
+            height: rem(577);
+            object-fit: cover;
+        }
+    }
+
+    .card-info {
+        display: flex;
+        justify-content: space-between;
+        max-width: rem(368);
+        margin-top: rem(18);
+
+        .card-name {
+            font-family: $font-aeonik;
+            font-weight: 400;
+            font-size: rem(20);
+            line-height: rem(24);
+        }
+
+        .card-price {
+            font-family: $font-aeonik;
+            font-weight: 400;
+            font-size: rem(20);
+            line-height: rem(24);
+        }
+    }
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    .products {
+        margin-top: rem(26);
+
+        .products-information {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .products-title {
+            font-size: rem(7);
+            line-height: rem(8);
+            letter-spacing: 0.1em;
+            margin-bottom: rem(22);
+        }
+
+        .products-desc {
+            font-size: rem(20);
+            line-height: rem(26);
+            width: 90%;
+            margin-bottom: 0;
+        }
+
+        .button-products {
+            font-size: rem(9.7);
+            line-height: rem(12);
+            width: rem(88);
+            padding: rem(7.06) rem(28.5);
+            margin-bottom: rem(5);
+        }
+
+        .products-list {
+            margin-top: rem(51.22);
+            grid-auto-columns: rem(223);
+            gap: rem(16);
+            margin-left: rem(-16);
+            margin-right: rem(-16);
+        }
+
+        .products-list {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .products-list::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .card {
+        scroll-snap-align: center;
+
+        .card-products {
+            .card-img {
+                width: rem(223);
+                height: rem(349);
+            }
+        }
+
+        .card-info {
+            max-width: rem(223);
+            margin-top: rem(15.13);
+
+            .card-name {
+                font-size: rem(10);
+                line-height: rem(12);
+            }
+
+            .card-price {
+                font-size: rem(10);
+                line-height: rem(12);
+            }
+        }
+    }
+}

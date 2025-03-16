@@ -1,0 +1,109 @@
+﻿.introduce {
+    margin-top: rem(156);
+
+    .introduce-images {
+        position: relative;
+    }
+
+    .introduce-slides::after {
+        content: "";
+        position: absolute;
+        max-width: rem(1920);
+        margin: 0 0;
+        height: rem(436);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: $color-grey-3;
+    }
+
+    .introduce-image-size {
+        width: rem(1340);
+        margin: 0 auto;
+    }
+
+    .introduce-slider {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: rem(50);
+        margin-top: rem(61);
+    }
+
+    .slider-step {
+        font-family: $font-aeonik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: rem(24);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .slider-desc {
+        font-family: $font-lora;
+        font-weight: 500;
+        font-size: rem(36);
+        align-items: center;
+        line-height: rem(46);
+    }
+
+    .slider-directions {
+        display: flex;
+
+        .slider-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: rem(8);
+        }
+    }
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    .introduce {
+        margin-top: rem(12);
+
+        .introduce-slides::after {
+            height: rem(171);
+        }
+
+        .introduce-image-size {
+            width: auto;
+            min-width: rem(169);
+        }
+
+        .introduce-slider {
+            padding-bottom: rem(17);
+            margin-top: rem(23);
+        }
+
+        .slider-step {
+            font-size: rem(7);
+            line-height: rem(8.4);
+        }
+
+        .slider-desc {
+            font-size: rem(13);
+            align-items: center;
+            line-height: rem(16.64);
+        }
+
+        .slider-directions {
+            .slider-left {
+                padding: 0 rem(14) 0 0;
+            }
+
+            .slider-right {
+                padding: 0 0 0 rem(14);
+            }
+
+            .directions-btn {
+                width: rem(15);
+            }
+        }
+    }
+}

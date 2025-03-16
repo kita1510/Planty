@@ -1,0 +1,100 @@
+﻿.intension {
+    .intension-container {
+        display: flex;
+        margin-top: rem(31);
+        justify-content: space-between;
+    }
+
+    .intension-left .content {
+        font-family: $font-aeonik;
+        font-weight: 250;
+        font-size: rem(24);
+        line-height: rem(29);
+        max-width: rem(518);
+        padding-right: rem(70);
+        box-sizing: content-box;
+    }
+
+    .intension-right .content {
+        font-family: $font-lora;
+        font-weight: 500;
+        font-size: rem(36);
+        line-height: rem(46);
+        width: 100%;
+        max-width: rem(627);
+    }
+
+    .intension-extend {
+        display: flex;
+        align-items: center;
+        gap: 0 rem(34);
+        justify-content: flex-start;
+        margin-top: rem(63);
+    }
+
+    .intension-link {
+        font-family: $font-aeonik;
+        font-weight: 400;
+        font-size: rem(20);
+        text-transform: uppercase;
+        line-height: rem(24);
+        color: $color-black-1;
+    }
+
+    .intension-icon {
+        width: rem(30);
+    }
+}
+
+// Screen:  width <= 1440px
+@include mq($BREAKPOINT-XXL + 1, max) {
+    .intension {
+        .intension-container {
+            justify-content: flex-start;
+        }
+    }
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    .intension {
+        .intension-container {
+            margin-top: rem(6);
+            flex-direction: column;
+        }
+
+        .intension-left .content {
+            font-size: rem(12);
+            line-height: rem(14.4);
+            width: 100%;
+            max-width: rem(259);
+            text-align: center;
+            margin: 0 auto rem(15);
+            padding-right: 0;
+        }
+
+        .intension-right .content {
+            font-size: rem(20);
+            line-height: rem(25.6);
+            width: 100%;
+            max-width: rem(348);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .intension-extend {
+            gap: 0 rem(26);
+            margin-top: rem(29);
+            justify-content: center;
+        }
+
+        .intension-link {
+            font-size: rem(12);
+            line-height: rem(14.4);
+        }
+
+        .intension-icon {
+            width: rem(24);
+        }
+    }
+}

@@ -1,0 +1,230 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<FrameworkProject.Models.Users>
+@{
+    ViewData["Title"] = "Home"; }
+@{
+    <section class="banner">
+        <div class="container banner-container">
+            <div class="banner-content">
+                <h1 class="banner-heading">
+                    Best house plants varieties.
+                </h1>
+                <a href="#" class="button button-banner top-button-display">Shop now</a>
+                <p class="banner-desc">
+                    Beautiful living greenery for homes and offices
+                </p>
+                <p class="banner-note">Wer've been mentioned in the press</p>
+                <a href="/Products/Plants" class="button button-banner bottom-button-display">Shop now</a>
+                <div class="banner-companies">
+                    <h3 class="companies-item aeonik">Bloomberg</h3>
+                    <h3 class="companies-item">Forbes</h3>
+                </div>
+            </div>
+            <div class="banner-image">
+                <img src="/assets/images/unsplash-mobile.svg" alt="unsplash-desktop">
+            </div>
+        </div>
+    </section>
+    <section class="intension container">
+        <div class="intension-container">
+            <div class="intension-left">
+                <p class="content">
+                    Each houseplant set is handled quickly and safely
+                    before being sent to your destination in specially
+                    designed insulated packaging.
+                </p>
+            </div>
+            <div class="intension-right">
+                <p class="content">
+                    Learn how ve take care of your plant
+                    at every stage of its journey from our
+                    greenhouse to your home.
+                </p>
+                <div class="intension-extend">
+                    <a href="#" class="intension-link">Learn more</a>
+                    <a href="#">
+                        <img src="/assets/images/icons/icon-extra.svg" alt="icons-extra" class="intension-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="introduce">
+        <div class="container introduce-images">
+            @*images-01*@
+            <div class="introduce-slides">
+                <img class="introduce-image-size" src="/assets/images/green-sprouts-desktop.png" alt="slide-01">
+                @*introduce-slider*@
+                <div class="introduce-slider">
+                    <p class="slider-step">Step 1</p>
+                    <p class="slider-desc">We put everything together</p>
+                    <div class="slider-directions">
+                        <button class="slider-btn slider-left">
+                            <img class="directions-btn" src="/assets/images/icons/arrow-left.svg" alt="arrow-left">
+                        </button>
+                        <button class="slider-btn slider-right">
+                            <img class="directions-btn" src="/assets/images/icons/arrow-right.svg" alt="arrow-right">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class="container products-container">
+            <div class="products-information">
+                <div class="products-content">
+                    <p class="products-title">Our shop</p>
+                    <p class="products-desc">Here are the best seller from our varieties</p>
+                </div>
+                <div class="products-button">
+                    <a href="/Products/Plants" class="button button-products">See all</a>
+                </div>
+            </div>
+            <!--<div class="products-list">-->
+            <!-- card-1 -->
+            <!--<div class="card">
+                <div class="card-products">
+                    <img class="card-img" src="/assets/images/fiddle-leaf-fig.png" alt="Fiddle-leaf fig">
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Fiddle-leaf fig</p>
+                    <p class="card-price">$110.99</p>
+                </div>
+            </div>-->
+            <!-- card-2 -->
+            <!--<div class="card">
+                <div class="card-products">
+                    <img class="card-img" src="/assets/images/aloe-vera.png" alt="Aloe vera">
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Aloe vera</p>
+                    <p class="card-price">$110.99</p>
+                </div>
+            </div>-->
+            <!-- card-3 -->
+            <!--<div class="card">
+                <div class="card-products">
+                    <img class="card-img" src="/assets/images/strelitzia-nicolai.png" alt="Strelitzia nicolai">
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Strelitzia nicolai</p>
+                    <p class="card-price">$110.99</p>
+                </div>
+            </div>-->
+            <!-- card-4 -->
+            <!--<div class="card">
+                <div class="card-products">
+                    <img class="card-img" src="/assets/images/aloe-vera.png" alt="Ficus microcarpa">
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Ficus microcarpa</p>
+                    <p class="card-price">$110.99</p>
+                </div>
+            </div>-->
+            <!-- card-5 -->
+            <!--<div class="card">
+                <div class="card-products">
+                    <img class="card-img" src="/assets/images/aloe-vera.png" alt="Ficus microcarpa">
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Ficus microcarpa</p>
+                    <p class="card-price">$110.99</p>
+                </div>
+            </div>-->
+            <!-- card-6 -->
+            <!--<div class="card">
+                    <div class="card-products">
+                        <img class="card-img" src="/assets/images/aloe-vera.png" alt="Ficus microcarpa">
+                    </div>
+                    <div class="card-info">
+                        <p class="card-name">Ficus microcarpa</p>
+                        <p class="card-price">$110.99</p>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="container feedback-container">
+            <div class="reviews">
+                <p class="reviews-title">Reviews</p>
+                <p class="reviews-content">
+                    Shop with confidance by reading customer
+                    reviews given by individuals who have used
+                    Bioomey. Excelient quality and streamlined
+                    service are both offered here.
+                </p>
+                <div class="reviews-rating">
+                    <img src="/assets/images/icons/icon-review-star.svg" alt="star-reviews" class="rating-star">
+                    <p class="rating-point">5/5</p>
+                </div>
+                <p class="reviews-total">2.479 reviews</p>
+            </div>
+            <div class="comments">
+                <div class="comments-featured">
+                    <div class="comments-content">
+                        <span>
+                            We adore all our friends atBloomey,
+                            especially the beauties who have come
+                        </span>
+                        <span>
+                            to live with us! Great advice when
+                            needed, beautifully and safely packaged.
+                        </span>
+                        <span>
+                            Highly recommend, it's just the best
+                            place for healthy plants and great value!
+                        </span>
+                    </div>
+                    <div class="comments-directions">
+                        <button class="btn-left">
+                            <img src="/assets/images/icons/arrow-left.svg" alt="arrow-left" class="comments-btn">
+                        </button>
+                        <button class="btn-right">
+                            <img src="/assets/images/icons/arrow-right.svg" alt="arrow-right" class="comments-btn">
+                        </button>
+                    </div>
+                </div>
+                <div class="commentator">
+                    <p class="comments-author">Pamela S.</p>
+                    <p class="comments-postscript">Lake Forest, CA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="album">
+        <div class="container album-container">
+            <div class="album-layout">
+                <img class="unsplash-img-1" src="/assets/images/unsplash-img-01-2x.png" alt="unsplash-img-01">
+                <img class="unsplash-img-2" src="/assets/images/unsplash-img-02-2x.png" alt="unsplash-img-02">
+                <img class="unsplash-img-3" src="/assets/images/unsplash-img-03.png" alt="unsplash-img-03">
+            </div>
+            <div class="inspired">
+                <p class="inspired-title">Get inspired from our Instagram</p>
+                <p class="inspired-content">If you use the hashtag #bioomey on Instagram, well spotlight you.</p>
+                <div class="inspired-extend">
+                    <div class="inspired-link">
+                        <a href="#" class="inspired-more">Check it out</a>
+                    </div>
+                    <a href="#">
+                        <img class="inspired-icon" src="/assets/images/icons/icon-extra.svg" alt="icons-extra">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe">
+        <div class="container subscribe-container">
+            <p class="subscribe-content">
+                Stay update with special offers, plant-parenting tips, and more.
+            </p>
+            <form class="subscribe-input">
+                <input type="text" id="semail" name="semail" placeholder="Your email">
+                <button type="submit" class="button subscribe-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+}

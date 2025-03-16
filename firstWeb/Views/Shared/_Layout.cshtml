@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/app.css" />
+    <link rel="stylesheet" href="~/css/app.css.map" />
+    <link rel="icon" href="/assets/images/planty-logo.svg" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @*<style>
+            .navbar-nav {
+                justify-content: center;
+                align-items: center;
+                gap: 0 15px;
+            href="../Views/Products/Plants.cshtml"
+        href="../Views/Products/Home.cshtml"
+        </style>*@
+</head>
+<body>
+    <header id="wrapper" class="header">
+        <div class="container header-container">
+            <a asp-controller="Products" asp-action="Home">
+                <img src="/Assets/Images/planty-logo.svg" alt="This is logo page" class="header-logo" />
+            </a>
+            <ul class="header-menu">
+                <li class="menu-item">
+                    <a class="menu-link" asp-controller="Products" asp-action="Plants">Plants</a>
+                </li>
+                <li class="menu-item">
+                    <a asp-controller="Products" asp-action="MyPlants" class="menu-link">My Plants</a>
+                </li>
+                <li class="menu-item">
+                    <a asp-controller="Products" asp-action="PlantsCare" class="menu-link">Plants care</a>
+                </li>
+                <li class="menu-item">
+                    <a asp-controller="Products" asp-action="ForSmallSize" class="menu-link">Small size</a>
+                </li>
+                <li class="menu-item">
+                    <a asp-controller="Products" asp-action="ForLargeSize" class="menu-link">Large size</a>
+                </li>
+                @{
+                    if (firstWeb.Program.USERGLOBAL.ROLEID == 1)
+                    {
+                        <li class="menu-item">
+                            <a asp-controller="Products" asp-action="ProductManagement" class="menu-link">Product Management</a>
+                        </li>
+                        <li class="menu-item">
+                            <a asp-controller="User" asp-action="UserManagement" class="menu-link">User Management</a>
+                        </li>
+                    }
+                }
+            </ul>
+            <div class="header-icon">
+                <a asp-controller="User" asp-action="Profile" class="icon-link">
+                    <img src="/Assets/Images/Icons/icon-user.svg" alt="This is icon user" class="icon-menu" />
+                </a>
+                <a asp-controller="Invoice" asp-action="Package" class="icon-link">
+                    <img src="/Assets/Images/Icons/icon-cart.svg" alt="This is icon cart" class="icon-menu" />
+                </a>
+                <a href="#" id="toggle" class="icon-link">
+                    <img src="/Assets/Images/Icons/icon-hamburger-menu.svg" alt="This is icon menu" class="icon-menu icon-display" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div id="wrapper">
+            @RenderBody()
+    </div>
+
+    <footer id="wrapper" class="footer">
+        <div class="container footer-container">
+            <a asp-controller="Products" asp-action="Home">
+                <img src="/assets/images/planty-logo.svg" alt="This is logo page" class="footer-logo" />
+            </a>
+            <ul class="footer-menu">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Help</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Contact Us</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Privacy & Terms</a>
+                </li>
+            </ul>
+            <div class="footer-icon">
+                <a href="#" class="app-link">
+                    <img src="/assets/images/icons/icon-facebook.svg" alt="This is icon facebook" class="icon-facebook" />
+                </a>
+                <a href="#" class="app-link">
+                    <img src="/assets/images/icons/icon-twetter.svg" alt="This is icon twetter" class="icon-twetter" />
+                </a>
+                <a href="#" class="app-link">
+                    <img src="/assets/images/icons/icon-instagram.svg" alt="This is icon instagram" class="icon-instagram" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!--
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

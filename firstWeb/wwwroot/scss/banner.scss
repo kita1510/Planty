@@ -1,0 +1,151 @@
+﻿.banner {
+    padding-top: rem(36);
+
+    .banner-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .banner-content {
+        margin: 0 rem(15) rem(46) 0;
+        flex-shrink: 2;
+    }
+
+    .banner-heading {
+        width: 100%;
+        max-width: rem(1038);
+        font-family: $font-belleza;
+        font-size: rem(96);
+        font-weight: 400;
+        line-height: rem(111);
+        letter-spacing: rem(-0.5);
+        margin: rem(82) 0 rem(40) 0;
+        padding-right: rem(15);
+    }
+
+    .banner-desc {
+        width: 100%;
+        max-width: rem(518);
+        font-family: $font-aeonik;
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: rem(28.8);
+        margin-bottom: rem(41);
+    }
+
+    .banner-note {
+        width: 100%;
+        max-width: rem(254);
+        font-family: $font-aeonik;
+        font-weight: 250;
+        font-size: rem(16);
+        line-height: rem(19.2);
+        margin-bottom: rem(65);
+    }
+
+    .banner-companies {
+        display: flex;
+        justify-content: space-between;
+        max-width: rem(395);
+
+        .companies-item {
+            font-size: rem(36);
+            font-family: $font-lora;
+            font-weight: 700;
+            line-height: rem(46.8);
+            color: $color-grey-2;
+
+            &.aeonik {
+                font-family: $font-aeonik;
+                font-weight: 900;
+                line-height: rem(43.2);
+                // margin-right: rem(90);
+            }
+        }
+    }
+
+    .banner-image {
+        margin-right: rem(-25);
+        flex-shrink: 1;
+
+        img {
+            width: 100%;
+            max-width: rem(565.5);
+            height: rem(782);
+            object-fit: cover;
+        }
+    }
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    .banner {
+        padding-top: rem(17);
+
+        .banner-container {
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+
+        .banner-content {
+            margin: 0 rem(5) 0 0;
+        }
+
+        .banner-heading {
+            font-size: rem(24);
+            line-height: rem(27.65);
+            width: 100%;
+            // max-width: rem(261);
+            padding-right: rem(35);
+            margin: rem(30) 0 rem(34) 0;
+        }
+
+        .banner-content .top-button-display {
+            display: none;
+        }
+
+        .banner-content .banner-desc {
+            width: 100%;
+            max-width: rem(310);
+            font-size: rem(15);
+            font-weight: 400;
+            line-height: rem(18);
+            margin-bottom: rem(12);
+            padding: 0 0;
+        }
+
+        .banner-content .banner-note {
+            max-width: rem(143);
+            font-weight: 250;
+            font-size: rem(9);
+            line-height: rem(10.8);
+            margin-bottom: rem(10);
+            padding: 0 0;
+        }
+
+        .banner-content .banner-companies {
+            margin-top: rem(23.87);
+            max-width: rem(152);
+
+            .companies-item {
+                font-size: rem(16);
+                line-height: rem(20.48);
+
+                &.aeonik {
+                    line-height: rem(19.2);
+                    // margin-right: rem(16);
+                }
+            }
+        }
+
+        .banner-image {
+            margin: rem(0) rem(-11) 0 rem(5);
+
+            img {
+                max-width: rem(193);
+                height: rem(267);
+                object-fit: cover;
+            }
+        }
+    }
+}

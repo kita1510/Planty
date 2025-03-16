@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<FrameworkProject.Models.Products>
+@{
+    ViewData["Title"] = "Plants Management"; }
+@{
+    <style>
+        .btn {
+            width: 200px;
+            height: 44px;
+            display: inline-block;
+            text-align: center;
+            background-color: #fff;
+            border: none;
+            margin: 0 5px;
+            line-height: 32px;
+            font-weight: 800;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 0 10px 20px;
+            background-color: black
+        }
+    </style>
+    <body id="page-top">
+        <div class="d-flex align-content-center">
+            <div>
+                <a href="/Products/AddProductView" class="btn" style="color: white">Add Product</a>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div class="container-fluid">
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3" style="color: black">
+                        <h2 class="m-0 font-weight-bold text-primary">
+                            Products management
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered"
+                                   id="dataTable"
+                                   width="100%"
+                                   cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Unit Price</th>
+                                        <th>Onhand Quantity</th>
+                                        <th>Category ID</th>
+                                        <th>Create On</th>
+                                        <th>isDeleted</th>
+                                        <th>Get 10 quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        @foreach (var item in Model)
+                                        {
+                                            if (item.ISDELETED == 1)
+                                            {
+                                                <tr style="background-color: red">
+                                                    <td>@item.NAME</td>
+                                                    <td>@item.DESCRIPTION</td>
+                                                    <td>@item.PRICE</td>
+                                                    <td>@item.QUANTITY</td>
+                                                    <td>@item.CATEID</td>
+                                                    <td>@item.CREATEDON</td>
+                                                    <th><a href="/Products/ReSale?p=@item.PROID" style="color: black">ReSale</a></th>
+                                                    <th><a href="/Products/Get10Qty?p=@item.PROID" style="color: black">Get 10 quantity</a></th>
+                                                </tr>
+                                            }
+                                            else if (item.QUANTITY < 5)
+                                            {
+                                                <tr style="background-color: yellow">
+                                                    <td>@item.NAME</td>
+                                                    <td>@item.DESCRIPTION</td>
+                                                    <td>@item.PRICE</td>
+                                                    <td>@item.QUANTITY</td>
+                                                    <td>@item.CATEID</td>
+                                                    <td>@item.CREATEDON</td>
+                                                    <th><a href="/Products/Delete?p=@item.PROID" style="color: black">Delete</a></th>
+                                                    <th><a href="/Products/Get10Qty?p=@item.PROID" style="color: black">Get 10 quantity</a></th>
+                                                </tr>
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td>@item.NAME</td>
+                                                    <td>@item.DESCRIPTION</td>
+                                                    <td>@item.PRICE</td>
+                                                    <td>@item.QUANTITY</td>
+                                                    <td>@item.CATEID</td>
+                                                    <td>@item.CREATEDON</td>
+                                                    <th><a href="/Products/Delete?p=@item.PROID" style="color: black">Delete</a></th>
+                                                    <th><a href="/Products/Get10Qty?p=@item.PROID" style="color: black">Get 10 quantity</a></th>
+                                                </tr>
+                                            }
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script> <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script> <!-- Page level plugins -->
+        <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script> <!-- Page level custom scripts -->
+        <script src="js/demo/datatables-demo.js"></script>
+    </body>
+}

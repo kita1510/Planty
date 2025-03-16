@@ -1,0 +1,17 @@
+﻿
+$BREAKPOINT-XS: 320px;
+$BREAKPOINT-SM: 480px;
+$BREAKPOINT-MD: 740px; 
+$BREAKPOINT-LG: 1152px; 
+$BREAKPOINT-XL: 1440px; 
+
+
+$container-max-widths: ( 
+    xs: 320px, //mobile
+    sm: 480px, //mobile
+    md: 740px, //tablet
+    lg: 1152px, //desktop
+    xl: 1440px, //desktop 
+);
+
+$grid-gutter-width: rem(10);

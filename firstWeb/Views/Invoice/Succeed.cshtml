@@ -1,0 +1,212 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Successfully order"; }
+@{
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .cart {
+            display: flex;
+            width: 1097px;
+            min-height: 497px;
+            flex-direction: column;
+            margin: 0 auto;
+            margin-top: 38px;
+            align-items: center;
+        }
+
+        .cart-title {
+            display: flex;
+            width: 100%;
+            font-size: 20px;
+            /* line-height: 24px; */
+            align-items: center;
+            height: 29px;
+        }
+
+            .cart-title a {
+                line-height: 29px;
+            }
+
+            .cart-title img {
+                font-size: 20px;
+                line-height: 29px;
+            }
+
+            .cart-title span {
+                font-size: 20px;
+                line-height: 29px;
+                margin-left: 5px;
+            }
+
+
+        .cart-link {
+            color: #2f80ed;
+            cursor: pointer;
+            height: 29px;
+            line-height: 24px;
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        .items-detail {
+            width: 100%;
+            min-height: 497px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 6px;
+            border-radius: 10px;
+            font-size: 20px;
+            padding-top: 37px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .item-detail {
+            display: flex;
+            min-height: 232px;
+        }
+
+
+        .payment-title {
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            line-height: 36px;
+        }
+
+            .payment-title img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .payment-title span {
+                font-size: 30px;
+                font-weight: 800;
+                color: #A0D378;
+            }
+
+        .payment-desc {
+            margin-top: 42px;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .payment-info {
+            margin-top: 31px;
+            min-height: 250px;
+            background-color: #D9D9D966;
+        }
+
+        .payment-name {
+            width: 470px;
+            min-height: 54px;
+            text-align: center;
+            line-height: 54px;
+            font-size: 20px;
+        }
+
+        .payment-user-info {
+            padding-left: 55px;
+            padding-right: 55px;
+        }
+
+            .payment-user-info li {
+                margin-top: 10px;
+            }
+
+
+
+
+        .item-info-footer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .item-info-footer button {
+                margin: 33px auto;
+                width: 429px;
+                height: 56px;
+                border-radius: 19px;
+                color: white;
+                background-color: black;
+                font-size: 18px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            .item-info-footer p {
+                margin: 0 auto;
+            }
+
+        /* Footer */
+
+        .cart-footer {
+            color: #ABABAB;
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 27px;
+            margin-bottom: 115px;
+            line-height: 24px;
+        }
+
+            .cart-footer a {
+                color: #ABABAB;
+            }
+    </style>
+    <body>
+        <div class="cart">
+            <div class="cart-title">
+                <a class="cart-link" href="/Products/Plants" style="color: cornflowerblue"><img src="/polygon.png" alt=""><span>Mua thêm sản phẩm khác</span> </a>
+            </div>
+            <div class="items-detail">
+                <div class="payment-title">
+                    <img src="/iconoir_shopping-bag-check.png" alt="" />
+                    <span>ĐẶT HÀNG THÀNH CÔNG</span>
+                </div>
+                <div class="payment-desc">
+                    Cảm ơn <b>Anh @ViewData["name"]</b>  đã cho Planty'x cơ hội được phục vụ. Trước 10:00 hôm
+                    sau, nhân viên Number One sẽ <b>
+                        gọi điện hoặc gửi tin nhắn xác nhận giao
+                        hàng
+                    </b> cho anh/chị.
+                </div>
+                <div class="payment-info">
+                    <div class="payment-name">ĐƠN HÀNG #081122tphcm05tran</div>
+                    <div class="payment-user-info">
+                        <ul>
+                            <li><b>Người nhận hàng:</b> Anh @ViewData["name"]</li>
+                            <li>
+                                <b> Giao đến:</b> @ViewData["add"]
+                                (nhân viên sẽ gọi khách hàng để xác nhận trước khi giao).
+                            </li>
+                            <li>
+                                <b> Tổng tiền:</b>
+                                <span style="color: #f91414"> @ViewData["price"]đ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-footer">
+                Bằng cách đặt hàng, bạn đồng ý với
+                <a href="">Điều khoản sử dụng của NumberOne</a>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+}

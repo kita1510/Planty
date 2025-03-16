@@ -1,0 +1,130 @@
+﻿.album {
+    margin-top: rem(55);
+}
+
+.album-container {
+    position: relative;
+}
+
+.album-layout {
+    display: grid;
+    grid-template-columns: 37.5% 58%;
+    grid-template-rows: 50% 46%;
+    gap: 4% 4.5%;
+
+    .unsplash-img-1 {
+        grid-column: 1 / 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .unsplash-img-2 {
+        grid-column: 2 / 3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .unsplash-img-3 {
+        grid-column: 1 / 3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.inspired {
+    position: absolute;
+    top: 58%;
+    left: 12%;
+
+    .inspired-title {
+        font-family: $font-lora;
+        font-weight: 500;
+        font-size: rem(48);
+        line-height: rem(61.44);
+        width: 100%;
+        max-width: rem(401);
+        margin-bottom: rem(9);
+    }
+
+    .inspired-content {
+        font-family: $font-aeonik;
+        font-weight: 250;
+        font-size: rem(16);
+        line-height: rem(19.2);
+        width: 100%;
+        max-width: rem(328);
+        margin-bottom: rem(9);
+    }
+
+    .inspired-extend {
+        display: flex;
+        align-items: center;
+        gap: 0 rem(38);
+    }
+
+    .inspired-more {
+        font-family: $font-aeonik;
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: rem(24);
+        color: $color-black-1;
+    }
+
+    .inspired-icon {
+        width: rem(24);
+    }
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    .album {
+        margin-top: rem(43);
+    }
+
+    .album-layout {
+        grid-template-columns: 48% 48%;
+        grid-template-rows: 58% 40%;
+        gap: 2% 4%;
+    }
+
+    .inspired {
+        top: 65%;
+        left: 10%;
+
+        .inspired-title {
+            font-size: rem(20);
+            line-height: rem(25.6);
+            max-width: rem(176);
+            margin-bottom: rem(10.86);
+        }
+
+        .inspired-content {
+            font-size: rem(10);
+            line-height: rem(12);
+            max-width: rem(205);
+            margin-bottom: rem(11);
+        }
+
+        .inspired-extend {
+            display: flex;
+            align-items: center;
+            gap: 0 rem(1);
+        }
+
+        .inspired-link {
+            display: contents;
+        }
+
+        .inspired-more {
+            font-size: rem(7);
+            line-height: rem(8.4);
+        }
+
+        .inspired-icon {
+            width: rem(6.38);
+        }
+    }
+}

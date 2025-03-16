@@ -1,0 +1,201 @@
+﻿.feedback {
+    margin-top: rem(164);
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews {
+    margin-right: rem(140);
+}
+
+.reviews-title {
+    font-family: $font-aeonik;
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: rem(24);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: rem(26);
+}
+
+.reviews-content {
+    font-family: $font-aeonik;
+    font-weight: 250;
+    font-size: rem(16);
+    line-height: rem(19.2);
+    width: 100%;
+    max-width: rem(302);
+    margin-bottom: rem(14);
+}
+
+.reviews-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(15);
+
+    .rating-star {
+        height: rem(25);
+        margin-right: rem(17);
+    }
+
+    .rating-point {
+        font-family: $font-aeonik;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: rem(19.2);
+    }
+}
+
+.reviews-total {
+    font-family: $font-aeonik;
+    font-weight: 400;
+    font-size: rem(13);
+    line-height: rem(15.6);
+}
+
+.comments-featured {
+    display: flex;
+    gap: 0 rem(144);
+    align-items: flex-start;
+}
+
+.comments-content {
+    font-family: $font-lora;
+    font-weight: 500;
+    font-size: rem(36);
+    line-height: rem(46.8);
+    width: 100%;
+    max-width: rem(676);
+    margin-bottom: rem(59);
+}
+
+.comments-directions {
+    min-width: rem(65.8);
+
+    .btn-left,
+    .btn-right {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 0;
+    }
+}
+
+.comments-btn {
+    width: rem(30.59);
+}
+
+.comments-author {
+    font-family: $font-lora;
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: rem(30.72);
+    margin-bottom: rem(11);
+}
+
+.comments-postscript {
+    font-family: $font-aeonik;
+    font-weight: 250;
+    font-size: rem(16);
+    line-height: rem(19.2);
+}
+
+// Screen: 0 <= width <= 768px
+@include mq-range($BREAKPOINT-XS, $BREAKPOINT-MD) {
+    .feedback {
+        margin-top: rem(18);
+    }
+
+    .feedback-container {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .reviews {
+        margin-right: 0;
+    }
+
+    .reviews-title {
+        font-size: rem(10);
+        line-height: rem(12);
+        margin-bottom: rem(21);
+    }
+
+    .reviews-content {
+        font-size: rem(7);
+        line-height: rem(8.4);
+        width: 100%;
+        max-width: rem(133);
+        margin: 0 auto rem(21);
+    }
+
+    .reviews-rating {
+        margin-bottom: rem(21);
+        justify-content: center;
+
+        .rating-star {
+            height: rem(13.5);
+            margin-right: rem(13);
+        }
+
+        .rating-point {
+            font-size: rem(7);
+            line-height: rem(8.4);
+        }
+    }
+
+    .reviews-total {
+        display: none;
+    }
+
+    .comments {
+        position: relative;
+    }
+
+    .comments-featured span {
+        display: block;
+    }
+
+    .comments-content {
+        font-size: rem(20);
+        line-height: rem(25.6);
+        max-width: rem(343);
+        margin-bottom: rem(69);
+        margin: 0 auto rem(68.5);
+    }
+
+    .comments-directions {
+        position: absolute;
+        bottom: rem(3);
+        right: rem(4);
+
+        .btn-left {
+            margin: 0 rem(2) rem(12.8) 0;
+        }
+    }
+
+    .comments-btn {
+        width: rem(29.17);
+    }
+
+    .commentator {
+        text-align: start;
+        margin-right: rem(80);
+    }
+
+    .comments-author {
+        font-size: rem(15);
+        line-height: rem(19.2);
+        margin-bottom: rem(12);
+    }
+
+    .comments-postscript {
+        font-size: rem(12);
+        line-height: rem(14.4);
+    }
+}

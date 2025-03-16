@@ -1,0 +1,266 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Register"; }
+@model IEnumerable<FrameworkProject.Models.Users>
+@{
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .login-page {
+            width: 1267px;
+            height: 882px;
+            display: flex;
+            margin: 50px auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 20px;
+        }
+
+        .login-page-left {
+            width: 715px;
+            height: 100%;
+        }
+
+        .login-form {
+            margin-left: 100px;
+            margin-top: 60px;
+            width: 425px;
+        }
+
+        .login-title {
+            font-size: 40px;
+            line-height: 48px;
+            color: #000000;
+            height: 48px;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        .login-desc {
+            margin-top: 11px;
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        .login-signin-google {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+            .login-signin-google img {
+                width: 213px;
+                height: 40px;
+            }
+
+        .login-button-form {
+            width: 425px;
+            height: 65px;
+            border-radius: 50px;
+            border: 1px solid #ABABAB;
+        }
+            /* .login-button-form input::placeholder{
+            color: #ABABAB;
+        } */
+            .login-button-form input {
+                border: none;
+                color: #000000;
+            }
+
+        .login-signin-desc {
+            color: #C7C7C7;
+            line-height: 19px;
+            margin-top: 31px;
+            display: flex;
+        }
+
+            .login-signin-desc hr {
+                color: #D9D9D9;
+                width: 128px;
+            }
+
+        .login-email {
+            margin-top: 26px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            height: 19px;
+            margin-bottom: 7px;
+        }
+
+            .login-email span {
+                color: #EF2121;
+            }
+
+
+        .login-password {
+            margin-top: 26px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            height: 19px;
+            margin-bottom: 7px;
+        }
+
+        .login-field input {
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            margin-left: 44px;
+            margin-top: 13px;
+            margin-bottom: 13px;
+            height: 60%;
+            width: 70%;
+            outline: none;
+        }
+
+            .login-field input::placeholder {
+                color: #C7C7C7;
+            }
+
+        .login-password span {
+            color: #EF2121;
+        }
+
+        .login-password input {
+            margin-top: 7px;
+        }
+
+        .login-remember {
+            display: flex;
+            margin-top: 21px;
+            justify-content: space-between;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+            .login-remember div:nth-child(1) {
+                display: flex;
+                height: 19px;
+            }
+
+                .login-remember div:nth-child(1) input {
+                    margin: 0px 12px 0px 0px;
+                    width: 20px;
+                    height: 20px;
+                }
+
+            .login-remember div:nth-child(2) {
+                font-weight: 600;
+                color: #295C00;
+            }
+
+        .login-button {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            background-color: #000000;
+            font-weight: 600;
+            line-height: 19px;
+            cursor: pointer;
+        }
+
+            .login-button:hover {
+                background-color: #333333;
+            }
+
+            .login-button.register {
+                margin-top: 30px;
+            }
+
+        .login-create {
+            margin-top: 14px;
+        }
+
+            .login-create a {
+                text-decoration: none;
+                color: #295C00;
+            }
+
+
+        .login-page-right {
+            background-image: url('/wwwroot/assets/images/strelitzia-nicolai.png');
+            width: 562px;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+            .login-page-right img {
+                width: 100%;
+                height: 100%
+            }
+
+            .login-page-right.register {
+                background-image: url('./images/plant.jpg');
+            }
+
+        .login-footer {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #C7C7C7;
+            margin-top: 76px;
+        }
+    </style>
+    <h3 style="color: red">@ViewData["message"]</h3>
+    <body>
+        <div class="login-page">
+            <div class="login-page-left">
+                <form class="login-form" action="/User/LoadRegisToHome" method="post">
+                    <div class="login-logo">
+                        <img src="./images/logo.png" alt="" srcset="" />
+                    </div>
+                    <div class="login-title">Register</div>
+                    <div class="login-desc">
+                        Register to purcharsing your favorite plant!
+                    </div>
+
+                    <div class="login-field">
+                        <div class="login-email">Email<span>*</span></div>
+                        <div class="login-button-form">
+                            <input name="Email" placeholder="mail@website.com" type="text" />
+                        </div>
+                    </div>
+                    <div class="login-field">
+                        <div class="login-password">Password<span>*</span></div>
+                        <div class="login-button-form">
+                            <input name="Password" placeholder="Min. 8 character" type="password" />
+                        </div>
+                    </div>
+                    <div class="login-field">
+                        <div class="login-password">Confirm Password<span>*</span></div>
+                        <div class="login-button-form">
+                            <input name="Address" placeholder="Min. 8 character" type="password" />
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" value="Register" class="login-button register login-button-form " />
+
+                    <div class="login-create">
+                        <a href="/User/Login">I had an account.</a>
+                    </div>
+                    <div class="login-footer">
+                        @@ 2022 Planty’s All rights reserved.
+                    </div>
+                </form>
+            </div>
+            <div class="login-page-right register">
+                <img src="~/assets/images/photo-background.png" />
+            </div>
+        </div>
+    </body>
+}
