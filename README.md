@@ -20,5 +20,5 @@ To set up this project locally, follow these steps:
 - ASP .NET Core 3.1
 
 ## Screenshot
-![Project Screenshot](![image](https://github.com/user-attachments/assets/47c1a63f-03d5-41f2-b2d0-6d58a5d21c2e)
+![Project Screenshot](images/Picture1.png)
 )
