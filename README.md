@@ -1,12 +1,11 @@
 # Tree-store
 
-Tree-store is a .NET Framework project designed to [provide a brief description of what your project does].
+Tree-store is a ASP .NET Core 3.1 project designed to  sell a variety of ornamental plants.
 
 ## Features
 
-- **Feature 1**: [Describe the first feature]
-- **Feature 2**: [Describe the second feature]
-- **Feature 3**: [Describe the third feature]
+- **Feature 1**: Register, log in to become a member.
+- **Feature 2**: View products and add them to cart
 
 ## Installation
 
@@ -21,4 +20,7 @@ To set up this project locally, follow these steps:
 
 ## Screenshot
 ![Project Screenshot](images/Picture1.png)
-)
+
+Products list
+
+![Project Screenshot](images/Picture3.png)
