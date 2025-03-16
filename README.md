@@ -5,7 +5,8 @@ Tree-store is a ASP .NET Core 3.1 project designed to  sell a variety of ornamen
 ## Features
 
 - **Feature 1**: Register, log in to become a member.
-- **Feature 2**: View products and add them to cart
+- **Feature 2**: View products and search products at price.
+- **Feature 3**: Add products to the cart to pay
 
 ## Installation
 
