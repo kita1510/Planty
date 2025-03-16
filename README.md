@@ -1,4 +1,4 @@
-# Tree-store
+# Planty
 
 Tree-store is a ASP .NET Core 3.1 project designed to  sell a variety of ornamental plants.
 
